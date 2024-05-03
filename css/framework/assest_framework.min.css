@@ -1,0 +1,35 @@
+:root {
+    --text-color: #131013;
+    --bg-color: #FEFEFE;
+    --bx-shadow: #131013;
+    --link-color: #212121;
+    --link-active: rgba(225, 225, 225, 0.4);
+    --navbar-brand-color: #131013;
+    --bg-opacity: 1;
+    --bg-color-opacity: rgba(253, 253, 253 , 0.7);
+    --bg-inner-color-opacity: rgba(238, 238, 238, 0.7);
+    --text-inner-color: #131013;
+    --border-color: rgba(180, 180, 180, 1);
+    --bg-col-color: rgba(180,180,180,0.4);
+}
+
+html.light {
+    --text-color: #131013;
+    --bg-color: #FEFEFE;
+    --navbar-brand-color: #131013;
+    --bx-shadow: #131013;
+    --text-inner-color: #FEFEFE;
+    --bg-color-opacity: rgba(253, 253, 253 , 0.7);
+    --bg-inner-color-opacity: rgba(238, 238, 238, 0.7);
+}
+
+html.dark {
+    --text-color: #FEFEFE;
+    --bg-color: #131013;
+    --navbar-brand-color: #FEFEFE;
+    --bx-shadow: #FEFEFE;
+    --text-inner-color: #131013;
+    --bg-color-opacity: rgba(30, 30, 30 , 0.7);
+    --bg-inner-color-opacity: rgba(30, 30, 30, 0.4);
+}
+

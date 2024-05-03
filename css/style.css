@@ -1,0 +1,428 @@
+::-webkit-scrollbar {
+  width: 0px !important;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: Overlock;
+  src: url(./fonts/Overlock-BoldItalic.ttf);
+}
+
+body {
+  width: 100%;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+.navbar {
+  background-color: transparent !important;
+  width: 100%;
+  padding: 0.25rem 0.25rem 0 0.25rem !important;
+}
+
+.navbar .container {
+  background-color: transparent;
+  flex-wrap: wrap !important;
+}
+
+.navbar-collapse {
+  flex: 1 0 100% !important;
+}
+
+.btn {
+  font-size: 26px !important;
+  color: var(--text-color) !important;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #316ff6 !important;
+  padding: 0 !important;
+}
+
+.navbar_buttons {
+  display: flex;
+}
+
+.navbar_buttons .btn {
+  padding: 5px !important;
+}
+
+.content {
+  background-color: transparent !important;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1199.98px) {
+  div > .container {
+    padding: 0 !important;
+  }
+}
+
+.content .row div[class^="col-xl"] {
+  background-color: var(--bg-col-color) !important;
+  min-height: 100vh !important;
+  overflow-x: hidden;
+}
+
+.website_tabs {
+  background-color: var(--bg-color) !important;
+  position: sticky-page;
+  width: 100%;
+  flex: 1 0 100%;
+  padding: 1rem 0 0 0;
+}
+
+.website_tabs > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap !important;
+  flex: 1 0 100%;
+}
+
+.website_tabs ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 16.66666667%;
+}
+
+.website_tabs ul li a {
+  flex: 0 0 100%;
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-color) !important;
+  letter-spacing: 1px;
+  transition: color 0.1s linear;
+  border-radius: 10px 10px 0 0;
+  overflow-y: hidden;
+}
+
+.website_tabs ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px 10px 0 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.website_tabs ul li a:active,
+.website_tabs ul li a.active,
+.website_tabs ul li a:hover {
+  color: #316ff6 !important;
+  background-color: var(--bg-inner-color-opacity) !important;
+}
+
+.website_tabs ul li a:active::after,
+.website_tabs ul li a.active::after,
+.website_tabs ul li a:hover::after {
+  transform: translateY(0px);
+  background-color: #316ff6;
+}
+
+.website_tabs ul li a i {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.create_post_row {
+  background-color: var(--bg-color) !important;
+  padding: 6px 0.25rem;
+}
+
+.create_new_post_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 100%;
+}
+
+.create_new_post_form button {
+  flex: 1 0 10%;
+  justify-content: center;
+}
+
+.create_new_post_form input {
+  padding: 8px 10px !important;
+  flex: 1 0 60%;
+  width: calc(60% - 20px) !important;
+  border-radius: 50px;
+  color: var(--text-color) !important;
+  background-color: var(--bg-inner-color-opacity);
+  box-shadow: 0 0 0 0.03rem var(--text-color);
+  font-size: 17px !important;
+}
+
+.create_new_post_form input:placeholder {
+  color: var(--text-color) !important;
+}
+
+.user_profile_image {
+  color: var(--bx-shadow) !important;
+  font-size: 45px !important;
+}
+
+.add_post_image {
+  color: rgba(30, 190, 20, 1) !important;
+}
+
+.stories_row {
+  background-color: transparent;
+  overflow-x: hidden;
+  flex: 1 0 100%;
+  position: relative;
+}
+
+.stories_slider {
+  background-color: var(--bg-color-opacity);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 0 0.75rem 0 0 !important;
+}
+
+.story {
+  height: 200px !important;
+  width: 120px !important;
+  background-color: transparent !important;
+  overflow: hidden;
+  margin: 0.75rem 0 0 0.3rem;
+  position: relative;
+  border-radius: 15px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.story > .user_profile_image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 500;
+  color: var(--bg-color) !important;
+}
+
+.user_name_story {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 500;
+  color: var(--bg-color) !important;
+  font-weight: 600;
+}
+
+.story_image:not(:first-of-type) {
+  width: 100%;
+  height: 100%;
+}
+
+.add_to_story {
+  background-color: #323232;
+  width: 100%;
+  height: 40%;
+  color: #f8f8f8 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+}
+
+.add_to_story button {
+  position: absolute;
+  transform: translateY(-15px);
+  padding: 10px !important;
+  background-color: #316ff6 !important;
+  color: #f8f8f8 !important;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.08rem #f8f8f8;
+  font-size: 13px !important;
+}
+
+.add_to_story span {
+  width: 48%;
+  font-size: 15px;
+  margin: auto;
+  text-align: center;
+  transform: translateY(5px);
+}
+
+.story:first-of-type .story_image {
+  border-radius: 10px 10px 0 0 !important;
+  width: 100%;
+  height: 60%;
+}
+
+.border_div {
+  border-bottom: 0.2px solid var(--border-color) !important;
+}
+
+.posts {
+  flex: 1 0 100%;
+  background-color: transparent !important;
+}
+
+.posts .post {
+  height: auto;
+  width: 100%;
+  flex: 1 0 100%;
+  background-color: var(--bg-color);
+  margin-top: 5px;
+}
+
+.post:first-of-type {
+  margin: 0 !important;
+}
+
+.post_header .col-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.25rem 0rem !important;
+}
+
+.post_user_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_name_image {
+  border-radius: 100px;
+  margin: 0 0.5rem 0 0;
+  font-size: 45px;
+  background-color: transparent !important;
+}
+
+.user_name_info {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent !important;
+}
+
+.user_name {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.post_time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #938393 !important;
+}
+
+.more_options {
+  background-color: transparent !important;
+  padding-top: 0 !important;
+}
+
+.more_options span {
+  background-color: var(--text-color) !important;
+  display: flex;
+  padding: 2px !important;
+  border-radius: 100%;
+  margin: 0 1.5px;
+}
+
+.post_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 100%;
+}
+
+.post_content_text {
+  padding: 6px 7px 2px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.post_content_image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+.post_reactions,
+.post_actions {
+  padding: 0.15rem !important;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex: 1 0 100%;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.comments_shares {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.number_of_reactions {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.fa-heart {
+  color: crimson !important;
+  margin-right: 2px;
+  font-size: 17px;
+}
+
+.post_actions .btn {
+  flex: 1 0 33.3333333%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 18px !important;
+}
+
+.post_actions .btn label {
+  display: block;
+  margin: 0 3px;
+}
+
+.post_actions .btn label span {
+  font-size: 14px !important;
+}
+
+#check_like {
+  position: absolute;
+  z-index: 500;
+  margin: auto;
+  display: none !important;
+}
+
+#check_like:checked ~ label {
+  color: #316ff6 !important;
+}

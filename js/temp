@@ -1,0 +1,76 @@
+const Navbar = () => {
+  return (
+    <div className="navbar navbar-expand-xl">
+      <div className="container">
+        <a className="navbar-brand" href="#">
+          <span> facebook </span>
+        </a>
+        <button type="button" className="btn btn_messenger">
+          <i className="fab fa-facebook-messenger"></i>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Post = () => {
+  return (
+    <div className="post">
+      <div className="row post_header">
+        <div className="col-12">
+          <div className="post_user_name">
+            <i className="fas fa-user-circle user_name_image"></i>
+            <div className="user_name_info">
+              <span className="user_name"> Khalil Sarme </span>
+              <span className="post_time"> 2d </span>
+            </div>
+          </div>
+          <button className="btn more_options">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div className="row post_content">
+        <p className="post_content_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum,
+          dolor sit amet consectetur adipisicing elit.
+        </p>
+        <img className="post_content_image" src="images/image_09.jpg" alt="" />
+      </div>
+      <div className="row post_reactions post_div">
+        <span className="number_of_reactions">
+          <i className="fa fa-heart"></i>
+          2.1K
+        </span>
+        <div className="comments_shares">
+          <span className="number_of_comments">12K Comment</span>.
+          <span className="number_of_shares">1K Shares</span>
+        </div>
+      </div>
+      <div className="row post_actions post_div">
+        <button className="btn button_reaction">
+          <i className="far fa-thumbs-up"></i> <span>Like</span>
+        </button>
+        <button className="btn button_reaction">
+          <i className="far fa-comment"></i> <span>Comment</span>
+        </button>
+        <button className="btn button_reaction">
+          <i className="fas fa-share"></i> <span>Share</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const App = () => {
+  return <Navbar />;
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+setInterval(function () {
+  ReactDOM.render(<Post /> , document.getElementById('group_posts'));
+  <Post />
+}, 1000);
