@@ -1,27 +1,22 @@
 ::-webkit-scrollbar {
-  width: 0px !important;
   background-color: transparent;
-  border-radius: 5px;
+  width: 0px;
+  height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
-  border-radius: 5px;
-}
-
-@font-face {
-  font-family: Overlock;
-  src: url(./fonts/Overlock-BoldItalic.ttf);
 }
 
 body {
   width: 100%;
   position: relative;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-opacity);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar {
-  background-color: transparent !important;
+  background-color: var(--bg-color) !important;
   width: 100%;
   padding: 0.25rem 0.25rem 0 0.25rem !important;
 }
@@ -47,7 +42,7 @@ body {
 .navbar-brand {
   font-size: 30px !important;
   font-weight: 700 !important;
-  color: #316ff6 !important;
+  color: #1877F2 !important;
   padding: 0 !important;
 }
 
@@ -73,13 +68,13 @@ body {
 }
 
 .content .row div[class^="col-xl"] {
-  background-color: var(--bg-col-color) !important;
+  background-color: transparent !important;
   min-height: 100vh !important;
   overflow-x: hidden;
 }
 
 .website_tabs {
-  background-color: var(--bg-color) !important;
+  background-color: transparent !important;
   position: sticky-page;
   width: 100%;
   flex: 1 0 100%;
@@ -132,15 +127,15 @@ body {
 .website_tabs ul li a:active,
 .website_tabs ul li a.active,
 .website_tabs ul li a:hover {
-  color: #316ff6 !important;
-  background-color: var(--bg-inner-color-opacity) !important;
+  color: #1877F2 !important;
+  background-color: var(--bg-color-opacity) !important;
 }
 
 .website_tabs ul li a:active::after,
 .website_tabs ul li a.active::after,
 .website_tabs ul li a:hover::after {
   transform: translateY(0px);
-  background-color: #316ff6;
+  background-color: #1877F2;
 }
 
 .website_tabs ul li a i {
@@ -172,7 +167,7 @@ body {
   width: calc(60% - 20px) !important;
   border-radius: 50px;
   color: var(--text-color) !important;
-  background-color: var(--bg-inner-color-opacity);
+  background-color: var(--bg-color-opacity);
   box-shadow: 0 0 0 0.03rem var(--text-color);
   font-size: 17px !important;
 }
@@ -191,14 +186,14 @@ body {
 }
 
 .stories_row {
-  background-color: transparent;
+  background-color: var(--bg-color);
   overflow-x: hidden;
   flex: 1 0 100%;
   position: relative;
 }
 
 .stories_slider {
-  background-color: var(--bg-color-opacity);
+  background-color: transparent;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -211,8 +206,8 @@ body {
   height: 200px !important;
   width: 120px !important;
   background-color: transparent !important;
+  margin: 0.5rem 0 0.5rem 0.75rem;
   overflow: hidden;
-  margin: 0.75rem 0 0 0.3rem;
   position: relative;
   border-radius: 15px;
   flex: 0 0 auto;
@@ -259,7 +254,7 @@ body {
   position: absolute;
   transform: translateY(-15px);
   padding: 10px !important;
-  background-color: #316ff6 !important;
+  background-color: #1877F2 !important;
   color: #f8f8f8 !important;
   border-radius: 50%;
   box-shadow: 0 0 0 0.08rem #f8f8f8;
@@ -404,16 +399,20 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
 }
 
 .post_actions .btn label {
-  display: block;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: nowrap;
   margin: 0 3px;
 }
 
 .post_actions .btn label span {
-  font-size: 14px !important;
+  font-size: 13px !important;
+  margin: 0 4px;
 }
 
 #check_like {
@@ -424,5 +423,5 @@ body {
 }
 
 #check_like:checked ~ label {
-  color: #316ff6 !important;
+  color: #1877F2 !important;
 }

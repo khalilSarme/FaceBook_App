@@ -28,7 +28,7 @@ const FacebookNavbarButton = () => {
 const FacebookNavbarLinks = () => {
   return (
     <>
-      <div className="website_tabs ms-auto border_div">
+      <div className="website_tabs ms-auto">
         <ul className="nav-list">
           <li className="nav-list-item">
             <a className="nav-list-link active" href="#">
@@ -233,7 +233,7 @@ const FacebookPostCreation = () => {
           type="text"
           name="new_post_text_content"
           id="new_post_text_content"
-          placeholder="What's on your mind?"
+          placeholder="What you mind ?"
         />
         <button className="btn add_post_image" type="button">
           <i className="fa fa-images"></i>
