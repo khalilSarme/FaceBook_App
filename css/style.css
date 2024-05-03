@@ -404,7 +404,7 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  font-size: 18px !important;
+  font-size: 13px !important;
 }
 
 .post_actions .btn label {
@@ -413,7 +413,7 @@ body {
 }
 
 .post_actions .btn label span {
-  font-size: 14px !important;
+  font-size: 12px !important;
 }
 
 #check_like {
