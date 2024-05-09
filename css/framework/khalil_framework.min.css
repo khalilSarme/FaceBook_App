@@ -1,8 +1,8 @@
 /* Start Framework */
 
 :root {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  --padding-x: 1.5rem;
+  --padding-y: 0;
 }
 
 .min-height-100vh {
@@ -12,6 +12,7 @@
 .scale-0 {
   transform: scale(0);
 }
+
 .empty {
   min-height: 50vh;
   background-color: transparent;
@@ -21,8 +22,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0 !important;
-  outline: 0 !important;
+  border: 0;
+  outline: 0;
   text-decoration: none;
   font-family: "Segoe UI", Helvetica, Sans-Serif;
 }
@@ -33,31 +34,17 @@ a {
   color: #08c;
 }
 
-label,
-input {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  font-size: 20px;
-  padding-left: 10px;
-}
-
-label {
-  padding-left: 0 !important;
-}
-
 button {
   background-color: #08c;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: box-shadow 0.25s ease-in-out;
-  padding: 10px 15px;
 }
 
 .container {
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--padding-x, 0.75rem);
+  padding-left: var(--padding-x, 0.75rem);
   margin: auto;
   width: 100%;
   background-color: transparent !important;
@@ -73,7 +60,7 @@ button {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .navbar > .container,
@@ -138,8 +125,6 @@ button {
   .navbar-expand-xl {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
   }
   .navbar-expand-xl .navbar-nav {
     -ms-flex-direction: row;
@@ -166,8 +151,7 @@ button {
 }
 
 .navbar-toggler {
-  height: 50px;
-  width: 50px;
+  padding: 25px;
   margin: 0;
   border-radius: 15px;
   background-color: transparent !important;
@@ -202,6 +186,14 @@ button {
 
 .justify-content-between {
   justify-content: space-between !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
 }
 
 .float-left {
@@ -253,7 +245,7 @@ dl {
 @media (min-width: 998px) {
   /*Large Screen Size */
   .container {
-    width: 960px;
+    width: 968px;
   }
   button {
     cursor: pointer;
@@ -270,6 +262,7 @@ dl {
 .responsive-image {
   width: 100% !important;
   height: 100% !important;
+  object-fit: contain;
 }
 
 .align-items-center {
@@ -287,34 +280,19 @@ td {
   text-align: center;
 }
 
-th,
-td {
-  font-size: 20px;
-  padding: 10px 10px;
-}
-
-th {
-  background-color: #333333;
-}
-
 .row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  --padding-x: 1.5rem;
+  --padding-y: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: calc(var(--padding-y) * -1);
 }
 .row > * {
   flex-shrink: 0;
   max-width: 100%;
-}
-@media (max-width: 1200px) {
-    .row {
-        margin: 0 !important;
-    }
-    .row > * {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+  padding-right: calc(var(--padding-x) / 2);
+  padding-left: calc(var(--padding-x) / 2);
+  margin-top: var(--padding-y);
 }
 .col {
   flex: 1 0 0%;
@@ -714,24 +692,7 @@ th {
   }
 }
 
-.h3,
-h3 {
-  margin-top: 0;
-  font-weight: 500;
-  line-height: 1;
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  .h3,
-  h3 {
-    font-size: 1.75rem;
-  }
-}
 
-.justify-content-end {
-  justify-content: flex-end !important;
-}
 
-/*dark mode*/
 
 /* End Framework */
